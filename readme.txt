@@ -4,7 +4,7 @@ Donate link: http://trenvo.com
 Tags: themes, customizer, preview, live, multisite
 Requires at least: 3.4
 Tested up to: 3.5beta2
-Stable tag: 0.8
+Stable tag: 0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,6 +34,9 @@ The usual way. Plugin requires no configuration (yet). To use it, simply go to A
 1. Live Theme Preview
 
 == Changelog ==
+
+= 0.9 =
+* BUGFIX: Live Theme Preview wasn't properly loaded
 
 = 0.8 =
 * Release
