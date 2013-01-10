@@ -3,7 +3,7 @@
 Plugin Name: Live Theme Preview
 Plugin URI: https://github.com/mgmartel/WP-Live-Theme-Preview
 Description: Live Theme Preview allows users to preview themes on their website before customizing or activating them.
-Version: 0.9
+Version: 1.0
 Author: Mike_Cowobo
 Author URI: http://trenvo.com
 
@@ -18,7 +18,7 @@ if (!defined('ABSPATH'))
  *
  * @since 0.1
  */
-define ( 'WP_LTP_VERSION', '0.9' );
+define ( 'WP_LTP_VERSION', '1.0' );
 
 /**
  * PATHs and URLs
@@ -129,33 +129,6 @@ if (!class_exists('WP_LiveThemePreview')) :
                 // Set Live Preview as the default theme selector in the WP admin menus
                 add_action('admin_menu', array ( &$this, 'add_menu_item' ) );
             }
-        }
-
-        /**
-         * Set the js vars and print the scripts
-         *
-         * Uses wp_ltp_js_vars filter.
-         *
-         * @global str $active_theme
-         * @since 0.1
-         */
-        public function print_scripts() {
-            global $active_theme;
-
-            $theme = ( isset ( $_GET['theme'] ) && ! empty ( $_GET['theme'] ) ) ? $_GET['theme'] : $active_theme;
-            $tmp = wp_get_theme( $theme );
-            $template = $tmp->template;
-            unset ( $tmp );
-
-            $args = apply_filters ( 'wp_ltp_js_vars', array (
-                "blog_url"                 => get_bloginfo('url'),
-                "previewed_theme"          => $theme,
-                "previewed_theme_template" => $template,
-            ) );
-
-            wp_localize_script( "live-theme-preview", 'wp_ltp', $args);
-
-            wp_print_scripts( array ('live-theme-preview', 'jquery') );
         }
 
         /**
