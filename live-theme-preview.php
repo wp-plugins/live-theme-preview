@@ -104,7 +104,9 @@ if (!class_exists('WP_LiveThemePreview')) :
          */
         protected function maybe_activate() {
             if( $_GET['action'] && $_GET['action'] == 'activate' && check_admin_referer( 'live-theme-preview_' . $_GET['stylesheet'] ) ) {
-                switch_theme( $_GET['stylesheet'] );
+                if ( version_compare( $GLOBALS['wp_version'], 3.5, '>=' ) )
+                    switch_theme( $_GET['stylesheet'] );
+                else switch_theme( $_GET['template'], $_GET['stylesheet'] );
             }
         }
 
