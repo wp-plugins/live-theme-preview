@@ -3,10 +3,10 @@
 
     $(document).ready( function() {
         // Get some vars from our template
-        blog_url = wp_ltp.blog_url;
-        previewed_theme = wp_ltp.previewed_theme;
-        previewed_theme_template = wp_ltp.previewed_theme_template;
-        iframe = $('.wp-full-overlay-main iframe');
+        blog_url = liveAdmin.blog_url,
+            previewed_theme = liveAdmin.previewed_theme,
+            previewed_theme_template = liveAdmin.previewed_theme_template,
+            iframe = $('.wp-full-overlay-main iframe');
 
         // Fade iFrame in onload
         iframe.load(function() {
@@ -16,17 +16,8 @@
         // Load iFrame
         preview_theme( previewed_theme_template, previewed_theme );
 
-        // Sidebar collpase
-        var body = $( document.body ),
-            overlay = body.children('.wp-full-overlay');
-
-        $('.collapse-sidebar').click( function( event ) {
-            overlay.toggleClass( 'collapsed' ).toggleClass( 'expanded' );
-            event.preventDefault();
-        });
-
         // The action
-        $('.themes .thumbnail').click( function() {
+        $('#live-admin-theme-controls .thumbnail').click( function() {
             var stylesheet = this.id;
             var template = $("input." + stylesheet ).val();
 

@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: Mike_Cowobo
 Donate link: http://trenvo.com
-Tags: themes, customizer, preview, live, multisite
+Tags: themes, customizer, preview, live, live admin, multisite
 Requires at least: 3.4
-Tested up to: 3.5beta2
+Tested up to: 3.5
 Stable tag: 0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,8 @@ See the screenshot, or install and try it for yourself.
 * Relocates WP 'Themes' interface to "Manage Themes" under Appearance
 * Customize before activate, back button redirects to Live Theme Preview
 
+**Live Theme Preview is part of [Live Admin](http://trenvo.com) and works great with [Live Dashboard](http://wordpress.org/extend/plugins/live-dashboard/), [WP Getting Started](http://wordpress.org/extend/plugins/wp-getting-started/) and  [Live Editor](https://github.com/mgmartel/WP-Live-Editor)**
+
 == Installation ==
 
 The usual way. Plugin requires no configuration (yet). To use it, simply go to Appearance->Themes.
@@ -34,6 +36,9 @@ The usual way. Plugin requires no configuration (yet). To use it, simply go to A
 1. Live Theme Preview
 
 == Changelog ==
+
+= 1.0 =
+* Update to latest [Live Admin](https://github.com/mgmartel/WP-Live-Admin)
 
 = 0.9 =
 * BUGFIX: Live Theme Preview wasn't properly loaded

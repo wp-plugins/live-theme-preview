@@ -1,37 +1,21 @@
-html, body{
-    width:100%;
-    height:100%;
-    margin:0;
-    padding:0;
-    overflow:hidden;
-}
-
 .wp-full-overlay-sidebar div.wp-full-overlay-sidebar-content {
     overflow-x: hidden;
     margin: 1em 0;
     padding-top: 3px;
 }
 
-.wp-full-overlay-main {
-    background: url('../img/wpspin_light.gif') 50% 50% no-repeat;
-}
-
-.wp-full-overlay-main iframe {
-    display: none;
-}
-
-.themes {
+#live-admin-theme-controls {
     padding-right: 11px;
     padding-left: 23px;
 }
 
-.themes .buttons {
+#live-admin-theme-controls .buttons {
     float: right;
     position: relative;
     z-index: 1;
 }
 
-.themes .title {
+#live-admin-theme-controls .title {
     text-align: left;
     color: #333;
     font-family: sans-serif;
@@ -43,17 +27,17 @@ html, body{
     position: relative;
 }
 
-.themes .title strong {
+#live-admin-theme-controls .title strong {
     font-variant: small-caps;
 }
 
-.themes .author {
+#live-admin-theme-controls .author {
     font-size: 12px;
     font-weight: bold;
     color: #999;
 }
 
-.themes .selected_themes {
+#live-admin-theme-controls .selected_themes {
     position:absolute;
     width:250px;
     height:166px;
@@ -62,7 +46,7 @@ html, body{
 }
 
 
-.themes .thumbnail{
+#live-admin-theme-controls .thumbnail{
     width: 250px;
     height: 166px;
     background-size: cover;
@@ -79,13 +63,13 @@ html, body{
     margin-bottom: 10px;
 }
 
-.themes .thumbnail:hover {
+#live-admin-theme-controls .thumbnail:hover {
     -webkit-box-shadow: 0px 2px 9px #666;
     -moz-box-shadow: 0px 2px 9px #666;
     box-shadow: 0px 2px 9px #666;
 }
 
-.themes .thumbnail.selected_theme {
+#live-admin-theme-controls .thumbnail.selected_theme {
     -webkit-box-shadow: 0px 2px 9px #000;
     -moz-box-shadow: 0px 2px 9px #000;
     box-shadow: 0px 2px 9px #000;
