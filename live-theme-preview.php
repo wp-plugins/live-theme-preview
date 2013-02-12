@@ -3,7 +3,7 @@
 Plugin Name: Live Theme Preview
 Plugin URI: https://github.com/mgmartel/WP-Live-Theme-Preview
 Description: Live Theme Preview allows users to preview themes on their website before customizing or activating them.
-Version: 1.0
+Version: 1.0.1
 Author: Mike_Cowobo
 Author URI: http://trenvo.com
 
@@ -103,7 +103,7 @@ if (!class_exists('WP_LiveThemePreview')) :
          * @since 0.1
          */
         protected function maybe_activate() {
-            if( $_GET['action'] && $_GET['action'] == 'activate' && check_admin_referer( 'live-theme-preview_' . $_GET['stylesheet'] ) ) {
+            if( isset ( $_GET['action'] ) && $_GET['action'] == 'activate' && check_admin_referer( 'live-theme-preview_' . $_GET['stylesheet'] ) ) {
                 if ( version_compare( $GLOBALS['wp_version'], 3.5, '>=' ) )
                     switch_theme( $_GET['stylesheet'] );
                 else switch_theme( $_GET['template'], $_GET['stylesheet'] );
@@ -118,7 +118,7 @@ if (!class_exists('WP_LiveThemePreview')) :
          */
         private function actions_and_filters() {
             // Make sure theme options of the previewed theme are loaded when available
-            if ( $_REQUEST['preview'] && true == $_REQUEST['preview'] )
+            if ( isset ( $_REQUEST['preview'] ) && true == $_REQUEST['preview'] )
                 add_filter( 'pre_option_theme_mods_' . get_option( 'stylesheet' ), array ( &$this, 'return_theme_options' ) );
 
             if ( $this->settings->is_default() ) {
