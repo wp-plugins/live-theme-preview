@@ -4,7 +4,7 @@ Donate link: http://trenvo.com
 Tags: themes, customizer, preview, live, live admin, multisite
 Requires at least: 3.4
 Tested up to: 3.5
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,8 +37,8 @@ The usual way. Plugin requires no configuration (yet). To use it, simply go to A
 
 == Changelog ==
 
-= 1.0.1 =
-* Fix for compatibility with PHP5.4
+= 1.0.2 =
+* PHP5.4 Compatibility
 
 = 1.0 =
 * Update to latest [Live Admin](https://github.com/mgmartel/WP-Live-Admin)
